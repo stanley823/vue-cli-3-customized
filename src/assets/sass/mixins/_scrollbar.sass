@@ -1,0 +1,19 @@
+@mixin scrollbarsGray($size, $foreground-color, $background-color: mix($foreground-color, $color-black, 10%))
+  &::-webkit-scrollbar
+      width:  $size
+      height: $size
+
+
+  &::-webkit-scrollbar-thumb
+      background: $foreground-color
+
+
+  &::-webkit-scrollbar-track
+      background: $background-color
+
+
+  // For Internet Explorer
+  body
+    scrollbar-face-color: $foreground-color
+    scrollbar-track-color: $background-color
+

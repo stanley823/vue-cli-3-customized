@@ -1,0 +1,32 @@
+// $susy: (container: 1200px, columns: 12, column-width: 80px, gutter-position: split, gutters: 1/4, grid-padding: 1/8, debug:(image:show))
+
+$susy: (container: 1200px, columns: 12, column-width: 80px, gutter-position: split, gutters: 1/4, grid-padding: 1/8)
+
+body
+    word-wrap   : break-word
+    font-size   : $font-base-size
+    font-family : $font-family
+    position: relative
+    background-color: #fff
+    overflow-x: hidden
+    touch-action: manipulation
+
+.container
+    +container
+
+a
+  text-decoration: none
+
+.margin-Top10
+    margin-top: 10px
+
+.count-total
+  margin-left: 1em
+  color: $color-silver
+  display: inline-block
+  +transform(translateY(2px))
+
++breakpoint(max-width 768px)
+  .count-total
+    margin-left: 0
+    margin-top: 1.5em
